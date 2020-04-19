@@ -26,7 +26,7 @@ const storageTypes = {
       },
     }),
     bucket: "uploadphotoapp",
-    contentType: multerS3.AUTO_CONTENT_TYPE,
+    // contentType: multerS3.AUTO_CONTENT_TYPE,
     acl: "public-read",
     key: (req, file, callback) => {
       crypto.randomBytes(8, (err, hash) => {

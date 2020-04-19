@@ -5,6 +5,7 @@ const morgan = require("morgan");
 const mongoose = require("mongoose");
 const path = require("path");
 const app = express();
+const cors = require("cors");
 
 //Database setup
 mongoose.connect(process.env.MONGO_URL, {
@@ -12,6 +13,7 @@ mongoose.connect(process.env.MONGO_URL, {
   useUnifiedTopology: true,
 });
 
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(morgan("dev")); //Log format
