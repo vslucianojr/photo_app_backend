@@ -21,7 +21,7 @@ const storageTypes = {
   s3: multerS3({
     s3: new aws.S3({
       credentials: {
-        accessKeyId: process.env.AWS_ACESS_KEY_ID,
+        accessKeyId: process.env.AWS_ACCESS_KEY_ID,
         secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
       },
     }),
