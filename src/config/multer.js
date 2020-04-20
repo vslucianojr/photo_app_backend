@@ -22,7 +22,7 @@ const storageTypes = {
     s3: new aws.S3({
       credentials: {
         accessKeyId: process.env.AWS_ACESS_KEY_ID,
-        secretAccessKey: process.env.AWS_SECRET_ACESS_KEY,
+        secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
       },
     }),
     bucket: "uploadphotoapp",
