@@ -5,8 +5,7 @@ const multerConfig = require("./config/multer");
 const Upload = require("./models/Upload");
 
 routes.get("/uploads", async (req, res) => {
-  const uploads = await Upload.find();
-
+  const uploads = await Upload.find().sort({ createdAt: -1 });
   return res.json(uploads);
 });
 
